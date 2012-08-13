@@ -1,2 +1,2 @@
-freetype
+freetype-py
 numpy
