@@ -12,7 +12,7 @@ import numpy
 face = freetype.Face('tom-thumb-tall.bdf')
 face.set_char_size(8 * 64)
 
-print "char[][] tom_thumb_tall = {"
+print "char tom_thumb_tall[][4] = {"
 
 for char_idx in xrange(32, 127):
     face.load_glyph(char_idx - 1)
