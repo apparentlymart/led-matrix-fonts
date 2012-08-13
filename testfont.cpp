@@ -12,6 +12,11 @@ int main(int argc, char** argv) {
 
     char* msg = argv[1];
 
+    char* pixel_string = (char*)"#";
+    if (argc > 2) {
+        pixel_string = argv[2];
+    }
+
     printf("\n");
 
     for (; *msg != '\0'; msg++) {
@@ -21,7 +26,7 @@ int main(int argc, char** argv) {
             printf("                    ");
             for (int ri = 7; ri >= 0; ri--) {
                 if (colval & (1 << ri)) {
-                    printf("#");
+                    printf("%s", pixel_string);
                 }
                 else {
                     printf(" ");
